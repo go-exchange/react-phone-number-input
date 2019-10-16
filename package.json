@@ -68,7 +68,8 @@
     "build": "npm-run-all clean-for-build generate-country-flags build-commonjs-modules build-es6-modules browser-build build-styles",
     "build-styles": "babel-node build-bundle-styles",
     "fix-locales": "babel-node fix-locales",
-    "prepublish": "npm-run-all fix-locales build test"
+    "prepublish": "npm-run-all fix-locales build test",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
