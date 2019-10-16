@@ -753,7 +753,9 @@ export default class PhoneNumberInput extends PureComponent
 	}
 
 	// Can be called externally.
-	focus = () => this.number_input.focus()
+	focus = () => {
+		if(this.number_input) this.number_input.focus()
+	}
 
 	storeCountrySelectInstance = _ => this.country_select = _
 
