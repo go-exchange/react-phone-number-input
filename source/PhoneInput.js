@@ -605,9 +605,6 @@ export default class PhoneNumberInput extends PureComponent
 
 		const new_value = e164(new_parsed_input, new_country, metadata)
 
-		// Focus phone number `<input/>` upon country selection.
-		this.focus()
-
 		// If the user has already manually selected a country
 		// then don't override that already selected country
 		// if the default `country` property changes.
