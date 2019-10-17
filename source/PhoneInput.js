@@ -752,15 +752,6 @@ export default class PhoneNumberInput extends PureComponent
 		})
 	}
 
-	// Can be called externally.
-	focus = () => {
-		if(this.number_input) this.number_input.focus()
-	}
-
-	storeCountrySelectInstance = _ => this.country_select = _
-
-	storePhoneNumberInputInstance = _ => this.number_input = _
-
 	// `state` holds previous props as `props`, and also:
 	// * `country` — The currently selected country, e.g. `"RU"`.
 	// * `value` — The currently entered phone number (E.164), e.g. `+78005553535`.
@@ -955,7 +946,6 @@ export default class PhoneNumberInput extends PureComponent
 					{ showCountrySelect &&
 						<CountrySelectComponent
 							{..._countrySelectProps}
-							ref={ this.storeCountrySelectInstance }
 							name={ name ? `${name}__country` : undefined }
 							value={ country }
 							options={ country_select_options }
@@ -976,7 +966,6 @@ export default class PhoneNumberInput extends PureComponent
 							type="tel"
 							name={ name }
 							{ ...phoneNumberInputProps }
-							ref={ this.storePhoneNumberInputInstance }
 							metadata={ metadata }
 							country={ country }
 							value={ parsed_input || '' }
