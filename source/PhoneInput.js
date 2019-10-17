@@ -952,7 +952,6 @@ export default class PhoneNumberInput extends PureComponent
 							disabled={ disabled }
 							tabIndex={ countrySelectTabIndex }
 							hidePhoneInputField={ this.hidePhoneInputField }
-							focusPhoneInputField={ this.focus }
 							aria-label={ countrySelectAriaLabel || labels.country }
 							className="react-phone-number-input__country"/>
 					}
