@@ -694,7 +694,13 @@ export default class PhoneNumberInput extends PureComponent
 	_onFocus = () => this.setState({ isFocused: true })
 
 	// Toggles the `--focus` CSS class.
-	_onBlur = () => this.setState({ isFocused: false })
+	_onBlur = () => {
+		const { onBlur } = this.props
+		if(onBlur) {
+			onBlur()
+		}
+		this.setState({ isFocused: false })
+	}
 
 	onFocus = (event) => {
 		const { onFocus } = this.props
