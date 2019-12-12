@@ -623,7 +623,7 @@ export default class PhoneNumberInput extends PureComponent
 			// Doing it after the `state` has been updated
 			// because `onChange()` will trigger `getDerivedStateFromProps()`
 			// with the new `value` which will be compared to `state.value` there.
-			onChange(new_value)
+			onChange(new_value, new_country)
 		})
 	}
 
